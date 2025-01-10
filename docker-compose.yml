@@ -1,6 +1,6 @@
 services:
   pbx:
-    image: portsip/pbx:latest  # Especifique a imagem Docker a ser usada
+    image: portsip/pbx:22  # Especifique a imagem Docker a ser usada
     container_name: pbx
     volumes:
       - ./pbx_data:/opt/portsip  # Monta um volume para persistência de dados
