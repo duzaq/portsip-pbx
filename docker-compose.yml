@@ -8,5 +8,5 @@ services:
       - WORKSPACE=/opt/portsip
     ports:
       - "5061:5060"  # Exemplo de porta para SIP
-      - "8080:8080"  # Exemplo de porta para interface web
+      - "8081:8080"  # Exemplo de porta para interface web
     restart: unless-stopped
