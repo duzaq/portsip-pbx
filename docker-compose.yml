@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  portsip:
+    build: .
+    container_name: portsip
+    volumes:
+      - ./data:/opt/portsip
+    environment:
+      - WORKSPACE=/opt/portsip
+    restart: unless-stopped
