@@ -1,9 +1,12 @@
 services:
-  portsip:
-    build: .
-    container_name: portsip
+  pbx:
+    image: portsip/pbx:latest  # Especifique a imagem Docker a ser usada
+    container_name: pbx
     volumes:
-      - ./data:/opt/portsip
+      - ./pbx_data:/opt/portsip  # Monta um volume para persistência de dados
     environment:
       - WORKSPACE=/opt/portsip
+    ports:
+      - "5060:5060"  # Exemplo de porta para SIP
+      - "8080:8080"  # Exemplo de porta para interface web
     restart: unless-stopped
